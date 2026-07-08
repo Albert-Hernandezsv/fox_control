@@ -143,33 +143,28 @@
                         </div>
                     </div>
 
-                    <div class="row camposCreditoFactura" style="display:none;">
-                        <div class="col-xl-6 col-xs-12">
-                            <div class="form-group">
-                                <p>Plazo de pago:</p>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
-                                    </div>
-                                    <select name="plazo_pago" class="form-control plazoPagoFactura">
-                                        <option value="" disabled selected>Seleccione una opci&oacute;n</option>
-                                        <option value="01">01 D&iacute;as</option>
-                                        <option value="02">02 Meses</option>
-                                        <option value="03">03 A&ntilde;os</option>
-                                    </select>
-                                </div>
+                    <!-- ENTRADA PARA TERMINO DE VENTA -->
+                    <div class="form-group">
+                        <p>Termino de venta CIF (sino lleva dejar en blanco):</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-usd"></i></span>
                             </div>
+                            <input type="text" class="form-control" name="terminoVentaCif" id="terminoVentaCif">
                         </div>
-                        <div class="col-xl-6 col-xs-12">
-                            <div class="form-group">
-                                <p>Periodo de pago:</p>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-sort-numeric-asc"></i></span>
-                                    </div>
-                                    <input type="number" name="periodo_pago" class="form-control periodoPagoFactura" min="1" step="1" placeholder="Ingrese un n&uacute;mero mayor a 0">
-                                </div>
+                    </div>
+
+                    <!-- ENTRADA PARA TERMINO VENTA FOB -->
+                    <div class="form-group">
+                        <p>Termino de venta FOB:</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-usd"></i></span>
                             </div>
+                            <select name="terminoVentaFob" id="terminoVentaFob" class="form-control" required>
+                                <option value="No">No</option>
+                                <option value="Si">Si</option>
+                            </select>
                         </div>
                     </div>
 
@@ -240,127 +235,76 @@
 
                         <div class="col-xl-6 col-xs-12">
                             
-                            <!-- ENTRADA PARA EL TIPO DE REGIMEN -->
+                            <!-- ENTRADA PARA EL REGIMEN -->
                             <div class="form-group">
                                 <p>Tipo de regimen:</p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                                     </div>
-                                    <select name="tipo_regimen" class="form-control" required>
-                                        <option value="" disabled selected>Seleccione una opci&oacute;n</option>
-                                        <option value="EX-1">EX-1 Exportaci&oacute;n Definitiva</option>
-                                        <option value="EX-2">EX-2 Exportaci&oacute;n Temporal</option>
-                                        <option value="EX-3">EX-3 Reexportaci&oacute;n</option>
-                                        <option value="TA-1">TA-1 Tr&aacute;nsito Aduanero</option>
-                                    </select>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-xl-6 col-xs-12">
-                            
-                            <!-- ENTRADA PARA EL REGIMEN -->
-                            <div class="form-group">
-                                <p>R&eacute;gimen:</p>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    </div>
                                     <select name="regimen" class="form-control" required>
-                                        <option value="1000.000">Exportación Definitiva, Régimen Común</option>
-                                        <option value="1040.000">Exportación Definitiva Sustitución de Mercancías, Régimen Común</option>
-                                        <option value="1041.020">Exportación Definitiva Proveniente de Franquicia Provisional, Franq. Presidenciales exento de DAI</option>
-                                        <option value="1041.021">Exportación Definitiva Proveniente de Franquicia Provisional, Franq. Presidenciales exento de DAI e IVA</option>
-                                        <option value="1048.025">Exportación Definitiva Proveniente de Franquicia Definitiva, Maquinaria y Equipo LZF. DPA</option>
-                                        <option value="1048.031">Exportación Definitiva Proveniente de Franquicia Definitiva, Distribución Internacional</option>
-                                        <option value="1048.032">Exportación Definitiva Proveniente de Franquicia Definitiva, Operaciones Internacionales de Logística</option>
-                                        <option value="1048.033">Exportación Definitiva Proveniente de Franquicia Definitiva, Centro Internacional de llamadas (Call Center)</option>
-                                        <option value="1048.034">Exportación Definitiva Proveniente de Franquicia Definitiva, Tecnologías de Información LSI</option>
-                                        <option value="1048.035">Exportación Definitiva Proveniente de Franquicia Definitiva, Investigación y Desarrollo LSI</option>
-                                        <option value="1048.036">Exportación Definitiva Proveniente de Franquicia Definitiva, Reparación y Mantenimiento de Embarcaciones Marítimas LSI</option>
-                                        <option value="1048.037">Exportación Definitiva Proveniente de Franquicia Definitiva, Reparación y Mantenimiento de Aeronaves LSI</option>
-                                        <option value="1048.038">Exportación Definitiva Proveniente de Franquicia Definitiva, Procesos Empresariales LSI</option>
-                                        <option value="1048.039">Exportación Definitiva Proveniente de Franquicia Definitiva, Servicios Médico-Hospitalarios LSI</option>
-                                        <option value="1048.040">Exportación Definitiva Proveniente de Franquicia Definitiva, Servicios Financieros Internacionales LSI</option>
-                                        <option value="1048.043">Exportación Definitiva Proveniente de Franquicia Definitiva, Reparación y Mantenimiento de Contenedores LSI</option>
-                                        <option value="1048.044">Exportación Definitiva Proveniente de Franquicia Definitiva, Reparación de Equipos Tecnológicos LSI</option>
-                                        <option value="1048.054">Exportación Definitiva Proveniente de Franquicia Definitiva, Atención Ancianos y Convalecientes LSI</option>
-                                        <option value="1048.055">Exportación Definitiva Proveniente de Franquicia Definitiva, Telemedicina LSI</option>
-                                        <option value="1048.056">Exportación Definitiva Proveniente de Franquicia Definitiva, Cinematografía LSI</option>
-                                        <option value="1052.000">Exportación Definitiva de DPA con origen en Compras Locales, Régimen Común</option>
-                                        <option value="1054.000">Exportación Definitiva de Zona Franca con origen en Compras Locales, Régimen Común</option>
-                                        <option value="1100.000">Exportación Definitiva de Envíos de Socorro, Régimen Común</option>
-                                        <option value="1200.000">Exportación Definitiva de Envíos Postales, Régimen Común</option>
-                                        <option value="1300.000">Exportación Definitiva Envíos que requieren despacho urgente, Régimen Común</option>
-                                        <option value="1400.000">Exportación Definitiva Courier, Régimen Común</option>
-                                        <option value="1400.011">Exportación Definitiva Courier, Muestras Sin Valor Comercial</option>
-                                        <option value="1400.012">Exportación Definitiva Courier, Material Publicitario</option>
-                                        <option value="1400.017">Exportación Definitiva Courier, Declaración de Documentos</option>
-                                        <option value="1500.000">Exportación Definitiva Menaje de casa, Régimen Común</option>
-                                        <option value="2100.000">Exportación Temporal para Perfeccionamiento Pasivo, Régimen Común</option>
-                                        <option value="2100.065">Exportación Temporal para Perfeccionamiento Pasivo, De Mercado Nacional a ZF o DPA</option>
-                                        <option value="2200.000">Exportación Temporal con Reimportación en el mismo estado, Régimen Común</option>
-                                        <option value="2200.065">Exportación Temporal con Reimportación en el mismo estado, De Mercado Nacional a ZF o DPA</option>
-                                        <option value="2400.000">Traslados Definitivos</option>
-                                        <option value="3050.000">Reexportación Proveniente de Importación Temporal, Régimen Común</option>
-                                        <option value="3051.000">Reexportación Proveniente de Tiendas Libres, Régimen Común</option>
-                                        <option value="3052.000">Reexportación Proveniente de Admisión Temporal para Perfeccionamiento Activo, Régimen Común</option>
-                                        <option value="3053.000">Reexportación Proveniente de Admisión Temporal, Régimen Común</option>
-                                        <option value="3054.000">Reexportación Proveniente de Régimen de Zona Franca, Régimen Común</option>
-                                        <option value="3055.000">Reexportación Proveniente de Admisión Temporal para Perfeccionamiento Activo con Garantía, Régimen Común</option>
-                                        <option value="3056.000">Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios, Régimen Común</option>
-                                        <option value="3056.047">Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios, Remisión a Departamento de Subastas</option>
-                                        <option value="3056.057">Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios, Remisión entre Usuarios Directos del Mismo Parque de Servicios</option>
-                                        <option value="3056.058">Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios, Remisión entre Usuarios Directos de Diferente Parque de Servicios</option>
-                                        <option value="3056.072">Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios, Decreto 738 Eléctricos e Híbridos</option>
-                                        <option value="3056.081">Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios, Remisión entre Usuarios Directos LSI</option>
-                                        <option value="3056.084">Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios, De una LSI para un DPA</option>
-                                        <option value="3056.085">Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios, De una LSI para una ZF</option>
-                                        <option value="3057.000">Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, Régimen Común</option>
-                                        <option value="3057.047">Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, Remisión a Departamento de Subastas</option>
-                                        <option value="3057.057">Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, Remisión entre Usuarios Directos del Mismo Parque de Servicios</option>
-                                        <option value="3057.058">Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, Remisión entre Usuarios Directos de Diferente Parque de Servicios</option>
-                                        <option value="3057.081">Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, Remisión entre Usuarios Directos LSI</option>
-                                        <option value="3057.084">Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, De una LSI para un DPA</option>
-                                        <option value="3057.085">Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, De una LSI para una ZF</option>
-                                        <option value="3058.033">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Centro Internacional de llamadas (Call Center)</option>
-                                        <option value="3058.034">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Tecnologías de Información LSI</option>
-                                        <option value="3058.035">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Investigación y Desarrollo LSI</option>
-                                        <option value="3058.036">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Reparación y Mantenimiento de Embarcaciones Marítimas LSI</option>
-                                        <option value="3058.037">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Reparación y Mantenimiento de Aeronaves LSI</option>
-                                        <option value="3058.038">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Procesos Empresariales LSI</option>
-                                        <option value="3058.039">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Servicios Médico-Hospitalarios LSI</option>
-                                        <option value="3058.040">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Servicios Financieros Internacionales LSI</option>
-                                        <option value="3058.043">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Reparación y Mantenimiento de Contenedores LSI</option>
-                                        <option value="3058.044">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Reparación de Equipos Tecnológicos LSI</option>
-                                        <option value="3058.054">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Atención Ancianos y Convalecientes LSI</option>
-                                        <option value="3058.055">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Telemedicina LSI</option>
-                                        <option value="3058.056">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Cinematografía LSI</option>
-                                        <option value="3058.082">Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Remisión entre Centros de Servicios LSI</option>
-                                        <option value="3059.000">Reexportación Proveniente de Admisión Temporal Reparación de Equipo Tecnológico Parque de Servicios, Régimen Común</option>
-                                        <option value="3059.057">Reexportación Proveniente de Admisión Temporal Reparación de Equipo Tecnológico Parque de Servicios, Remisión entre Usuarios Directos del Mismo Parque de Servicios</option>
-                                        <option value="3059.058">Reexportación Proveniente de Admisión Temporal Reparación de Equipo Tecnológico Parque de Servicios, Remisión entre Usuarios Directos de Diferente Parque de Servicios</option>
-                                        <option value="3059.033">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Centro Internacional de llamadas (Call Center)</option>
-                                        <option value="3059.034">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Tecnologías de Información LSI</option>
-                                        <option value="3059.035">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Investigación y Desarrollo LSI</option>
-                                        <option value="3059.038">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Procesos Empresariales LSI</option>
-                                        <option value="3059.039">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Servicios Médico-Hospitalarios LSI</option>
-                                        <option value="3059.040">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Servicios Financieros Internacionales LSI</option>
-                                        <option value="3059.044">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Reparación de Equipos Tecnológicos LSI</option>
-                                        <option value="3059.047">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Remisión a Departamento de Subastas</option>
-                                        <option value="3059.054">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Atención Ancianos y Convalecientes LSI</option>
-                                        <option value="3059.055">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Telemedicina LSI</option>
-                                        <option value="3059.056">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Cinematografía LSI</option>
-                                        <option value="3059.081">Reexportación Proveniente de Servicios Internacionales en Parques de Servicios, Remisión entre Usuarios Directos</option>
-                                        <option value="3070.000">Reexportación Proveniente de Depósito, Régimen Común</option>
-                                        <option value="3070.047">Reexportación Proveniente de Depósito, Remisión a Departamento de Subastas</option>
-                                        <option value="3070.072">Reexportación Proveniente de Depósito, Decreto 738 Eléctricos e Híbridos</option>
-                                        <option value="3071.000">Reexp. Prov. de Depósito</option>
-                                        <option value="0000.000">Tránsito Aduanero</option>
+                                        <option value="" disabled selected>Seleccione una opción</option>
+                                        <option value="EX-1.1000.000">EX-1.1000.000 Exportación Definitiva, Exportación Definitiva, Régimen Común</option>
+                                        <option value="EX-1.1040.000">EX-1.1040.000 Exportación Definitiva, Exportación Definitiva Sustitución de Mercancías. Régimen Común</option>
+                                        <option value="EX-1.1041.020">EX-1.1041.020 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Provisional. Franq. Presidenciales exento de DAI</option>
+                                        <option value="EX-1.1041.021">EX-1.1041.021 Exportación Definitiva, Exportación Definitiva Proveniente de Franquicia Provisional, Franq. Presidenciales exento de DAI e IVA</option>
+                                        <option value="EX-1.1048.025">EX-1.1048.025 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva, Maquinaria y Equipo LZF. DPA</option>
+                                        <option value="EX-1.1048.031">EX-1.1048.031 Exportación Definitiva, Exportación Definitiva Proveniente de Franquicia Definitiva, Distribución Internacional</option>
+                                        <option value="EX-1.1048.032">EX-1.1048.032 Exportación Definitiva, Exportación Definitiva Proveniente. de Franquicia Definitiva. Operaciones Internacionales de Logística</option>
+                                        <option value="EX-1.1048.033">EX-1.1048.033 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Centro Internacional de llamadas (Call Center)</option>
+                                        <option value="EX-1.1048.034">EX-1.1048.034 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva, Tecnologías de Información LSI</option>
+                                        <option value="EX-1.1048.035">EX-1.1048.035 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Investigación y Desarrollo LSI</option>
+                                        <option value="EX-1.1048.036">EX-1.1048.036 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Reparación y Mantenimiento de Embarcaciones Marítimas LSI</option>
+                                        <option value="EX-1.1048.037">EX-1.1048.037 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Reparación y Mantenimiento de Aeronaves LSI</option>
+                                        <option value="EX-1.1048.038">EX-1.1048.038 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Procesos Empresariales LSI</option>
+                                        <option value="EX-1.1048.039">EX-1.1048.039 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Servicios Medico-Hospitalarios LSI</option>
+                                        <option value="EX-1.1048.040">EX-1.1048.040 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Servicios Financieros Internacionales LSI</option>
+                                        <option value="EX-1.1048.043">EX-1.1048.043 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Reparación y Mantenimiento de Contenedores LSI</option>
+                                        <option value="EX-1.1048.044">EX-1.1048.044 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Reparación de Equipos Tecnológicos LSI</option>
+                                        <option value="EX-1.1048.054">EX-1.1048.054 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Atención Ancianos y Convalecientes LSI</option>
+                                        <option value="EX-1.1048.055">EX-1.1048.055 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Telemedicina LSI</option>
+                                        <option value="EX-1.1048.056">EX-1.1048.056 Exportación Definitiva. Exportación Definitiva Proveniente de Franquicia Definitiva. Cinematografía LSI</option>
+                                        <option value="EX-1.1052.000">EX-1.1052.000 Exportación Definitiva. Exportación Definitiva de DPA con origen en Compras Locales. Régimen Común</option>
+                                        <option value="EX-1.1054.000">EX-1.1054.000 Exportación Definitiva. Exportación Definitiva de Zona Franca con origen en Compras Locales. Régimen Común</option>
+                                        <option value="EX-1.1100.000">EX-1.1100.000 Exportación Definitiva. Exportación Definitiva de Envíos de Socorro. Régimen Común</option>
+                                        <option value="EX-1.1200.000">EX-1.1200.000 Exportación Definitiva. Exportación Definitiva de Envíos Postales. Régimen Común</option>
+                                        <option value="EX-1.1300.000">EX-1.1300.000 Exportación Definitiva. Exportación Definitiva Envíos que requieren despacho urgente. Régimen Común</option>
+                                        <option value="EX-1.1400.000">EX-1.1400.000 Exportación Definitiva. Exportación Definitiva Courier, Régimen Común</option>
+                                        <option value="EX-1.1400.011">EX-1.1400.011 Exportación Definitiva, Exportación Definitiva Courier, Muestras Sin Valor Comercial</option>
+                                        <option value="EX-1.1400.012">EX-1.1400.012 Exportación Definitiva, Exportación Definitiva Courier, Material Publicitario</option>
+                                        <option value="EX-1.1400.017">EX-1.1400.017 Exportación Definitiva, Exportación Definitiva Courier. Declaración de Documentos</option>
+                                        <option value="EX-1.1500.000">EX-1.1500.000 Exportación Definitiva, Exportación Definitiva Menaje de casa. Régimen Común</option>
+                                        <option value="EX-2.2100.000">EX-2.2100.000 Exportación Temporal. Exportación Temporal para Perfeccionamiento Pasivo, Régimen Común</option>
+                                        <option value="EX-2.2200.000">EX-2.2200.000 Exportación Temporal. Exportación Temporal con Reimportación en el mismo estado, Régimen Común</option>
+                                        <option value="EX-2.2400.000">EX-2.2400.000 Traslados Definitivos</option>
+                                        <option value="EX-3.3050.000">EX-3.3050.000 Re-Exportación. Reexportación Proveniente de Importación Temporal, Régimen Común</option>
+                                        <option value="EX-3.3051.000">EX-3.3051.000 Re-Exportación, Reexportación Proveniente de Tiendas Libres, Régimen Común</option>
+                                        <option value="EX-3.3052.000">EX-3.3052.000 Re-Exportación. Reexportación Proveniente de Admisión Temporal para Perfeccionamiento Activo. Régimen Común</option>
+                                        <option value="EX-3.3053.000">EX-3.3053.000 Re-Exportación. Reexportación Proveniente de Admisión Temporal. Régimen Común</option>
+                                        <option value="EX-3.3054.000">EX-3.3054.000 Re-Exportación. Reexportación Proveniente de Régimen de Zona Franca. Régimen Común</option>
+                                        <option value="EX-3.3055.000">EX-3.3055.000 Re-Exportación. Reexportación Proveniente de Admisión Temporal para Perfeccionamiento Activo con Garantía, Régimen Común</option>
+                                        <option value="EX-3.3056.000">EX-3.3056.000 Re-Exportación. Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios. Régimen Común</option>
+                                        <option value="EX-3.3056.057">EX-3.3056.057 Re-Exportación. Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios. Remisión entre Usuarios Directos del Mismo Parque de Servicios</option>
+                                        <option value="EX-3.3056.058">EX-3.3056.058 Re-Exportación. Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios. Remisión entre Usuarios Directos de Diferente Parque de Servicios</option>
+                                        <option value="EX-3.3056.072">EX-3.3056.072 Re-Exportación. Reexportación Proveniente de Admisión Temporal Distribución Internacional Parque de Servicios. Decreto 738 Eléctricos e Híbridos</option>
+                                        <option value="EX-3.3057.000">EX-3.3057.000 Re-Exportación. Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, Régimen Común</option>
+                                        <option value="EX-3.3057.057">EX-3.3057.057 Re-Exportación. Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios, Remisión entre Usuarios Directos del Mismo Parque de Servicios</option>
+                                        <option value="EX-3.3057.058">EX-3.3057.058 Re-Exportación. Reexportación Proveniente de Admisión Temporal Operaciones Internacional de Logística Parque de Servicios. Remisión entre Usuarios Directos de Diferente Parque de Servicios</option>
+                                        <option value="EX-3.3058.033">EX-3.3058.033 Re-Exportación. Reexportación Proveniente de Admisión Temporal Centro Servicio LSI, Centro Internacional de llamadas (Call Center)</option>
+                                        <option value="EX-3.3058.036">EX-3.3058.036 Re-Exportación. Reexportación Proveniente de Admisión Temporal Centro Servicio LSI. Reparación y Mantenimiento de Embarcaciones Marítimas LSI</option>
+                                        <option value="EX-3.3058.037">EX-3.3058.037 Re-Exportación. Reexportación Proveniente de Admisión Temporal Centro Servicio LSI. Reparación y Mantenimiento de Aeronaves LSI</option>
+                                        <option value="EX-3.3058.043">EX-3.3058.043 Re-Exportación. Reexportación Proveniente de Admisión Temporal Centro Servicio LSI. Reparación y Mantenimiento de Contenedores LSI</option>
+                                        <option value="EX-3.3059.000">EX-3.3059.000 Re-Exportación. Reexportación Proveniente de Admisión Temporal Reparación de Equipo Tecnológico Parque de Servicios. Régimen Común</option>
+                                        <option value="EX-3.3059.057">EX-3.3059.057 Re-Exportación. Reexportación Proveniente de Admisión Temporal Reparación de Equipo Tecnológico Parque de Servicios. Remisión entre Usuarios Directos del Mismo Parque de Servicios</option>
+                                        <option value="EX-3.3059.058">EX-3.3059.058 Re-Exportación. Reexportación Proveniente de Admisión Temporal Reparación de Equipo Tecnológico Parque de Servicios. Remisión entre Usuarios Directos de Diferente Parque de Servicios</option>
+                                        <option value="EX-3.3070.000">EX-3.3070.000 Re-Exportación. Reexportación Proveniente de Depósito .. Régimen Común</option>
+                                        <option value="EX-3.3070.072">EX-3.3070.072 Re-Exportación, Reexportación Proveniente de Depósito .. Decreto 738 Eléctricos e Híbridos</option>
+                                        <option value="EX-3.3071.000">EX-3.3071.000 Reexp. Prov. de Deposito.</option>
+                                        <option value="EX-3.3052.000">EX-3.3052.000 Reexp. Prov. de Adm Temp. para Perfeccionamiento Activo</option>
+                                        <option value="EX-3.3054.000">EX-3.3054.000 Reexp. Prov. de Regimen de Zona Franca</option>
+                                        <option value="EX-3.3055.000">EX-3.3055.000 Reexp. Prov.de Adm.Temporal para Perfeccionamiento Activo con Garantía</option>
+                                        <option value="EX-3.3056.000">EX-3.3056.000 Re-Exp. Prov.de AdmTemporal Ley de Servi. Internacionales</option>
+                                        <option value="EX-3.3057.000">EX-3.3057.000 Reexportación Prov. de Centro de Servicio LSI</option>
                                     </select>
 
                                 </div>
@@ -372,36 +316,6 @@
                     </div>
 
                     <div class="row">
-
-                        <div class="col-xl-6 col-xs-12">
-                            
-                            <!-- ENTRADA PARA INCOTERMS -->
-                            <div class="form-group">
-                                <p>INCOTERM:</p>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    </div>
-                                    <select name="cod_incoterms" class="form-control">
-                                        <option value="" selected>Seleccione una opci&oacute;n</option>
-                                        <option value="01">01 EXW-En fabrica</option>
-                                        <option value="02">02 FCA-Libre transportista</option>
-                                        <option value="03">03 C PT -Transporte pagado hasta</option>
-                                        <option value="04">04 CIP-Transporte y seguro pagado hasta</option>
-                                        <option value="05">05 DAP-Entrega en el lugar</option>
-                                        <option value="06">06 DPU-Entregado en el lugar descargado</option>
-                                        <option value="07">07 DDP-Entrega con impuestos pagados</option>
-                                        <option value="08">08 FAS-Libre al costado del buque</option>
-                                        <option value="09">09 FOB-Libre a bordo</option>
-                                        <option value="10">10 C FR-Costo y flete</option>
-                                        <option value="11">11 CIF- Costo seguro y flete</option>
-                                    </select>
-
-                                </div>
-
-                            </div>
-
-                        </div>
 
                         <div class="col-xl-6 col-xs-12">
 
@@ -484,7 +398,7 @@
                                                     $motoristas = ControladorClientes::ctrMostrarMotoristas($item, $valor, $orden);
 
                                                     foreach ($motoristas as $key => $value){
-                                                            echo '<option value="'.$value["id"].'" >'.$value["nombre"].'</option>';
+                                                            echo '<option value="'.$value["id"].'" >'.$value["nombre"].' '.$value["placaMotorista"].'</option>';
                                                     }
                                                 ?>
                                             </select>
@@ -497,6 +411,7 @@
                     </div>
                     <hr style="border: 1px solid black; width: 80%; margin: 20px auto;">
                     <!-- Contenedor donde se agregarán los productos -->
+                    
                     <?php
                         if (isset($_GET["idCotizacionUsar"])) {
                             ?>
@@ -669,7 +584,7 @@
                                     }
                                     echo '<button class="btn btn-warning" onclick="actualizarTotalFactura()" type="button">Aplicar cambios a la factura!!</button>';
                                     // Después de generar los elementos, imprime un script para llamar a la función JS
-                        ;
+;
 
                                 } else {
                                     echo "Error: El formato de los datos de productos es incorrecto.";
@@ -815,7 +730,7 @@
                                                 </div>
                                             </div>
 
-                                                <div class="col-xl-3 col-xs-12" hidden>
+                                                <div class="col-xl-3 col-xs-12">
                                                     Total a disminuir por cada uno de los items - colocar sin iva (si lleva iva se suma automaticamente)
                                                     <div class="input-group mb-3">
                                                         <div class="input-group-prepend">
@@ -825,7 +740,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-xl-2 col-xs-12" hidden>
+                                                <div class="col-xl-2 col-xs-12">
                                                     Porcentaje de descuento según lo ingresado (ejemplo 40, 33, SIN EL PORCENTAJE)
                                                     <div class="input-group mb-3">
                                                         <div class="input-group-prepend">
@@ -835,7 +750,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-xl-3 col-xs-12" hidden>
+                                                <div class="col-xl-3 col-xs-12">
                                                     Contraseña desbloqueo de descuentos
                                                     <div class="input-group mb-3">
                                                         <div class="input-group-prepend">
@@ -845,7 +760,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-xl-2 col-xs-12" hidden>
+                                                <div class="col-xl-2 col-xs-12">
                                                     <br>
                                                     <button type="button" class="btn btn-warning btnEliminarAutorizacionDescuentos">Eliminar autorización descuentos</button>
                                                 </div>
@@ -975,10 +890,9 @@ MODAL VER COTIZACIONES AUTORIZADAS
         <div class="modal-body">
 
           <div class="box-body">
-             <p id="resumenCotizacionesModal" class="text-muted">Abra el modal para cargar las cotizaciones.</p>
              <!-- Añadir el contenedor responsivo -->
              <div class="table-responsive">
-             <table class="table table-bordered table-striped dt-responsive tablas tabla-servidor" width="100%" style="font-size: 80%">
+             <table class="table table-bordered table-striped dt-responsive tablas" width="100%" style="font-size: 80%">
          
                 <thead>
                 
@@ -996,7 +910,7 @@ MODAL VER COTIZACIONES AUTORIZADAS
         
                 </thead>
         
-                <tbody id="tablaCotizacionesModal">
+                <tbody>
         
                     <?php
         
@@ -1006,7 +920,7 @@ MODAL VER COTIZACIONES AUTORIZADAS
                     $optimizacion = "no";
                     
         
-                    $cotizaciones = array();
+                    $cotizaciones = ControladorFacturas::ctrMostrarCotizacionesAutorizadasFac($item, $valor, $orden, $optimizacion);
                     foreach ($cotizaciones as $key => $value){
                         if($value["estado"] == "Facturacion"){
                             $item = "id";
@@ -1053,7 +967,6 @@ MODAL VER COTIZACIONES AUTORIZADAS
         
                 </table>
             </div>
-            <nav id="paginacionCotizacionesModal" aria-label="Paginaci&oacute;n de cotizaciones"></nav>
             
             
 

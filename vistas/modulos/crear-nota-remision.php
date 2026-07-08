@@ -25,7 +25,7 @@
     <br><br>
     <h1>
       
-      Factura de exportación
+      Nota de remisión
     
     </h1>
 
@@ -143,37 +143,58 @@
                         </div>
                     </div>
 
-                    <div class="row camposCreditoFactura" style="display:none;">
-                        <div class="col-xl-6 col-xs-12">
-                            <div class="form-group">
-                                <p>Plazo de pago:</p>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
-                                    </div>
-                                    <select name="plazo_pago" class="form-control plazoPagoFactura">
-                                        <option value="" disabled selected>Seleccione una opci&oacute;n</option>
-                                        <option value="01">01 D&iacute;as</option>
-                                        <option value="02">02 Meses</option>
-                                        <option value="03">03 A&ntilde;os</option>
-                                    </select>
-                                </div>
+                    <!-- ENTRADA PARA TERMINO DE VENTA -->
+                    <div class="form-group">
+                        <p>Termino de venta CIF (sino lleva dejar en blanco):</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-usd"></i></span>
                             </div>
-                        </div>
-                        <div class="col-xl-6 col-xs-12">
-                            <div class="form-group">
-                                <p>Periodo de pago:</p>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-sort-numeric-asc"></i></span>
-                                    </div>
-                                    <input type="number" name="periodo_pago" class="form-control periodoPagoFactura" min="1" step="1" placeholder="Ingrese un n&uacute;mero mayor a 0">
-                                </div>
-                            </div>
+                            <input type="text" class="form-control" name="terminoVentaCif" id="terminoVentaCif">
                         </div>
                     </div>
 
-                    
+                    <!-- ENTRADA PARA TERMINO VENTA FOB -->
+                    <div class="form-group">
+                        <p>Termino de venta FOB:</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-usd"></i></span>
+                            </div>
+                            <select name="terminoVentaFob" id="terminoVentaFob" class="form-control" required>
+                                <option value="No">No</option>
+                                <option value="Si">Si</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xl-3 col-xs-12">
+                            <!-- ENTRADA PARA ARANCEL -->
+                            <div class="form-group">
+                                <p>Arancel:</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-text-width"></i></span>
+                                    </div>
+                                    <input type="text" name="arancel" id="arancel" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-xs-12">
+                            <!-- ENTRADA PARA PERIODO -->
+                            <div class="form-group">
+                                <p>Periodo:</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-text-width"></i></span>
+                                    </div>
+                                    <input type="text" name="periodo" id="periodo" class="form-control">
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-xl-3 col-xs-12">
                             
                             <!-- ENTRADA PARA EL MOTORISTA -->
@@ -194,7 +215,7 @@
                                                     $motoristas = ControladorClientes::ctrMostrarMotoristas($item, $valor, $orden);
 
                                                     foreach ($motoristas as $key => $value){
-                                                            echo '<option value="'.$value["id"].'" >'.$value["nombre"].'</option>';
+                                                            echo '<option value="'.$value["id"].'" >'.$value["nombre"].' '.$value["placaMotorista"].'</option>';
                                                     }
                                                 ?>
                                             </select>
@@ -206,6 +227,8 @@
                     </div>
  
                     <hr style="border: 1px solid black; width: 80%; margin: 20px auto;">
+
+
                     <!-- Contenedor donde se agregarán los productos -->
                     <?php
                         if (isset($_GET["idCotizacionUsar"])) {
@@ -357,7 +380,7 @@
                                     }
                                     echo '<button class="btn btn-warning" onclick="actualizarTotalFactura()" type="button">Aplicar cambios a la factura!!</button>';
                                     // Después de generar los elementos, imprime un script para llamar a la función JS
-                        ;
+;
 
                                 } else {
                                     echo "Error: El formato de los datos de productos es incorrecto.";
@@ -543,7 +566,9 @@
                             <?php
                         }
                     ?>
-    
+                    
+
+
                     <?php
 
                         if($cliente["tipo_cliente"] == "01" || $cliente["tipo_cliente"] == "02" || $cliente["tipo_cliente"] == "03"){ // Contribuyente, beneficios y diplomas
@@ -652,10 +677,9 @@ MODAL VER COTIZACIONES AUTORIZADAS
         <div class="modal-body">
 
           <div class="box-body">
-             <p id="resumenCotizacionesModal" class="text-muted">Abra el modal para cargar las cotizaciones.</p>
              <!-- Añadir el contenedor responsivo -->
              <div class="table-responsive">
-             <table class="table table-bordered table-striped dt-responsive tablas tabla-servidor" width="100%" style="font-size: 80%">
+             <table class="table table-bordered table-striped dt-responsive tablas" width="100%" style="font-size: 80%">
          
                 <thead>
                 
@@ -673,7 +697,7 @@ MODAL VER COTIZACIONES AUTORIZADAS
         
                 </thead>
         
-                <tbody id="tablaCotizacionesModal">
+                <tbody>
         
                     <?php
         
@@ -683,7 +707,7 @@ MODAL VER COTIZACIONES AUTORIZADAS
                     $optimizacion = "no";
                     
         
-                    $cotizaciones = array();
+                    $cotizaciones = ControladorFacturas::ctrMostrarCotizacionesAutorizadasFac($item, $valor, $orden, $optimizacion);
                     foreach ($cotizaciones as $key => $value){
                         if($value["estado"] == "Facturacion"){
                             $item = "id";
@@ -730,7 +754,6 @@ MODAL VER COTIZACIONES AUTORIZADAS
         
                 </table>
             </div>
-            <nav id="paginacionCotizacionesModal" aria-label="Paginaci&oacute;n de cotizaciones"></nav>
             
             
 

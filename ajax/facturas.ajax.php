@@ -1236,7 +1236,7 @@ class AjaxFacturas {
                                         "montoPago" => round($factura["total"] - $retencionGranContribuyente, 2),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null
@@ -1551,7 +1551,7 @@ class AjaxFacturas {
                                         "montoPago" => round($nuevoTotal - $retencionGranContribuyente, 2),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null
@@ -1775,7 +1775,7 @@ class AjaxFacturas {
                                         "montoPago" => round($factura["totalSinIva"] - $retencionGranContribuyente, 2),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null
@@ -2000,7 +2000,7 @@ class AjaxFacturas {
                                         "montoPago" => round($factura["totalSinIva"] - $retencionGranContribuyente, 2),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null
@@ -2238,7 +2238,7 @@ class AjaxFacturas {
                                         "montoPago" => round(($factura["total"] - $retencionGranContribuyente), 2),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null
@@ -2451,7 +2451,7 @@ class AjaxFacturas {
                                         "montoPago" => round($factura["totalSinIva"], 2),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null
@@ -2664,7 +2664,7 @@ class AjaxFacturas {
                                         "montoPago" => round($factura["totalSinIva"], 2),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null
@@ -3486,7 +3486,7 @@ class AjaxFacturas {
                                         "montoPago" => round($factura["totalSinIva"]),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null
@@ -3697,7 +3697,7 @@ class AjaxFacturas {
                                         "montoPago" => round($factura["totalSinIva"]),
                                         "referencia" => null,
                                         "plazo" => $factura["plazo_pago"],
-                                        "periodo" => $factura["periodo_pago"]
+                                        "periodo" => (int) $factura["periodo_pago"]
                                     ]
                                 ]
                                 : null

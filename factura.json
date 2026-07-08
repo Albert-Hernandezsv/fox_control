@@ -1,0 +1,115 @@
+{
+    "contentType": "application\/JSON",
+    "nit": "06172710001020",
+    "activo": true,
+    "passwordPri": "Mampi0712_",
+    "dteJson": {
+        "identificacion": {
+            "version": 2,
+            "ambiente": "01",
+            "tipoDte": "01",
+            "numeroControl": "DTE-01-S001P001-000000000000036",
+            "codigoGeneracion": "9DC6F140-EE5C-1364-EE2B-A9B987B70ABF",
+            "tipoModelo": 1,
+            "tipoOperacion": 1,
+            "tipoContingencia": null,
+            "motivoContin": null,
+            "fecEmi": "2026-07-06",
+            "horEmi": "10:25:46",
+            "tipoMoneda": "USD"
+        },
+        "emisor": {
+            "nit": "06172710001020",
+            "nrc": "3504330",
+            "nombre": "Albert Uziel Hernandez Mendoza",
+            "codActividad": "62010",
+            "descActividad": "Programación Informática",
+            "nombreComercial": null,
+            "direccion": {
+                "departamento": "06",
+                "municipio": "22",
+                "distrito": "17",
+                "complemento": "Montes de San Bartolo 5, Comunidad Nueva Esperanza, casa 29"
+            },
+            "telefono": "72502171",
+            "codEstable": "M001",
+            "codPuntoVenta": "P001",
+            "correo": "albert@qwerty-systems.com"
+        },
+        "receptor": {
+            "tipoDocumento": "13",
+            "numDocumento": "064790706",
+            "nrc": null,
+            "nombre": "YADHIRA GISSELLE CRUZ PEREZ",
+            "codActividad": null,
+            "descActividad": null,
+            "direccion": {
+                "departamento": "06",
+                "municipio": "22",
+                "distrito": "17",
+                "complemento": "Zona Franca de San Bartolo, local 19"
+            },
+            "telefono": "12345678",
+            "correo": "empres3a@gmail.com"
+        },
+        "otrosDocumentos": null,
+        "documentoRelacionado": null,
+        "ventaTercero": null,
+        "cuerpoDocumento": [
+            {
+                "numItem": 1,
+                "tipoItem": 1,
+                "numeroDocumento": null,
+                "cantidad": 1,
+                "codigo": "1114",
+                "codTributo": null,
+                "uniMedida": 59,
+                "descripcion": "Sistema Fox Control Avanzado mensual",
+                "precioUni": 1.13,
+                "montoDescu": 0,
+                "tributos": null,
+                "psv": 0,
+                "noGravado": 0,
+                "ivaItem": 0.13,
+                "ventaNoSuj": 0,
+                "ventaExenta": 0,
+                "ventaGravada": 1.13
+            }
+        ],
+        "resumen": {
+            "totalNoSuj": 0,
+            "totalExenta": 0,
+            "totalGravada": 1.13,
+            "observaciones": null,
+            "subTotalVentas": 1.13,
+            "descuNoSuj": 0,
+            "descuExenta": 0,
+            "descuGravada": 0,
+            "porcentajeDescuento": 0,
+            "totalDescu": 0,
+            "tributos": null,
+            "subTotal": 1.13,
+            "ivaRete": 0,
+            "montoTotalOperacion": 1.13,
+            "totalNoGravado": 0,
+            "totalPagar": 1.13,
+            "totalLetras": "UNO 13\/100",
+            "totalIva": 0.13,
+            "saldoFavor": 0,
+            "condicionOperacion": 1,
+            "pagos": [
+                {
+                    "codigo": "01",
+                    "montoPago": 1.13,
+                    "referencia": null,
+                    "plazo": null,
+                    "periodo": null
+                }
+            ],
+            "numPagoElectronico": null
+        },
+        "apendice": null
+    },
+    "firmaElectronica": "eyJhbGciOiJSUzUxMiJ9.ew0KICAiaWRlbnRpZmljYWNpb24iIDogew0KICAgICJ2ZXJzaW9uIiA6IDIsDQogICAgImFtYmllbnRlIiA6ICIwMSIsDQogICAgInRpcG9EdGUiIDogIjAxIiwNCiAgICAibnVtZXJvQ29udHJvbCIgOiAiRFRFLTAxLVMwMDFQMDAxLTAwMDAwMDAwMDAwMDAzNiIsDQogICAgImNvZGlnb0dlbmVyYWNpb24iIDogIjlEQzZGMTQwLUVFNUMtMTM2NC1FRTJCLUE5Qjk4N0I3MEFCRiIsDQogICAgInRpcG9Nb2RlbG8iIDogMSwNCiAgICAidGlwb09wZXJhY2lvbiIgOiAxLA0KICAgICJ0aXBvQ29udGluZ2VuY2lhIiA6IG51bGwsDQogICAgIm1vdGl2b0NvbnRpbiIgOiBudWxsLA0KICAgICJmZWNFbWkiIDogIjIwMjYtMDctMDYiLA0KICAgICJob3JFbWkiIDogIjEwOjI1OjQ2IiwNCiAgICAidGlwb01vbmVkYSIgOiAiVVNEIg0KICB9LA0KICAiZW1pc29yIiA6IHsNCiAgICAibml0IiA6ICIwNjE3MjcxMDAwMTAyMCIsDQogICAgIm5yYyIgOiAiMzUwNDMzMCIsDQogICAgIm5vbWJyZSIgOiAiQWxiZXJ0IFV6aWVsIEhlcm5hbmRleiBNZW5kb3phIiwNCiAgICAiY29kQWN0aXZpZGFkIiA6ICI2MjAxMCIsDQogICAgImRlc2NBY3RpdmlkYWQiIDogIlByb2dyYW1hY2nDs24gSW5mb3Jtw6F0aWNhIiwNCiAgICAibm9tYnJlQ29tZXJjaWFsIiA6IG51bGwsDQogICAgImRpcmVjY2lvbiIgOiB7DQogICAgICAiZGVwYXJ0YW1lbnRvIiA6ICIwNiIsDQogICAgICAibXVuaWNpcGlvIiA6ICIyMiIsDQogICAgICAiZGlzdHJpdG8iIDogIjE3IiwNCiAgICAgICJjb21wbGVtZW50byIgOiAiTW9udGVzIGRlIFNhbiBCYXJ0b2xvIDUsIENvbXVuaWRhZCBOdWV2YSBFc3BlcmFuemEsIGNhc2EgMjkiDQogICAgfSwNCiAgICAidGVsZWZvbm8iIDogIjcyNTAyMTcxIiwNCiAgICAiY29kRXN0YWJsZSIgOiAiTTAwMSIsDQogICAgImNvZFB1bnRvVmVudGEiIDogIlAwMDEiLA0KICAgICJjb3JyZW8iIDogImFsYmVydEBxd2VydHktc3lzdGVtcy5jb20iDQogIH0sDQogICJyZWNlcHRvciIgOiB7DQogICAgInRpcG9Eb2N1bWVudG8iIDogIjEzIiwNCiAgICAibnVtRG9jdW1lbnRvIiA6ICIwNjQ3OTA3MDYiLA0KICAgICJucmMiIDogbnVsbCwNCiAgICAibm9tYnJlIiA6ICJZQURISVJBIEdJU1NFTExFIENSVVogUEVSRVoiLA0KICAgICJjb2RBY3RpdmlkYWQiIDogbnVsbCwNCiAgICAiZGVzY0FjdGl2aWRhZCIgOiBudWxsLA0KICAgICJkaXJlY2Npb24iIDogew0KICAgICAgImRlcGFydGFtZW50byIgOiAiMDYiLA0KICAgICAgIm11bmljaXBpbyIgOiAiMjIiLA0KICAgICAgImRpc3RyaXRvIiA6ICIxNyIsDQogICAgICAiY29tcGxlbWVudG8iIDogIlpvbmEgRnJhbmNhIGRlIFNhbiBCYXJ0b2xvLCBsb2NhbCAxOSINCiAgICB9LA0KICAgICJ0ZWxlZm9ubyIgOiAiMTIzNDU2NzgiLA0KICAgICJjb3JyZW8iIDogImVtcHJlczNhQGdtYWlsLmNvbSINCiAgfSwNCiAgIm90cm9zRG9jdW1lbnRvcyIgOiBudWxsLA0KICAiZG9jdW1lbnRvUmVsYWNpb25hZG8iIDogbnVsbCwNCiAgInZlbnRhVGVyY2VybyIgOiBudWxsLA0KICAiY3VlcnBvRG9jdW1lbnRvIiA6IFsgew0KICAgICJudW1JdGVtIiA6IDEsDQogICAgInRpcG9JdGVtIiA6IDEsDQogICAgIm51bWVyb0RvY3VtZW50byIgOiBudWxsLA0KICAgICJjYW50aWRhZCIgOiAxLA0KICAgICJjb2RpZ28iIDogIjExMTQiLA0KICAgICJjb2RUcmlidXRvIiA6IG51bGwsDQogICAgInVuaU1lZGlkYSIgOiA1OSwNCiAgICAiZGVzY3JpcGNpb24iIDogIlNpc3RlbWEgRm94IENvbnRyb2wgQXZhbnphZG8gbWVuc3VhbCIsDQogICAgInByZWNpb1VuaSIgOiAxLjEzLA0KICAgICJtb250b0Rlc2N1IiA6IDAsDQogICAgInRyaWJ1dG9zIiA6IG51bGwsDQogICAgInBzdiIgOiAwLA0KICAgICJub0dyYXZhZG8iIDogMCwNCiAgICAiaXZhSXRlbSIgOiAwLjEzLA0KICAgICJ2ZW50YU5vU3VqIiA6IDAsDQogICAgInZlbnRhRXhlbnRhIiA6IDAsDQogICAgInZlbnRhR3JhdmFkYSIgOiAxLjEzDQogIH0gXSwNCiAgInJlc3VtZW4iIDogew0KICAgICJ0b3RhbE5vU3VqIiA6IDAsDQogICAgInRvdGFsRXhlbnRhIiA6IDAsDQogICAgInRvdGFsR3JhdmFkYSIgOiAxLjEzLA0KICAgICJvYnNlcnZhY2lvbmVzIiA6IG51bGwsDQogICAgInN1YlRvdGFsVmVudGFzIiA6IDEuMTMsDQogICAgImRlc2N1Tm9TdWoiIDogMCwNCiAgICAiZGVzY3VFeGVudGEiIDogMCwNCiAgICAiZGVzY3VHcmF2YWRhIiA6IDAsDQogICAgInBvcmNlbnRhamVEZXNjdWVudG8iIDogMCwNCiAgICAidG90YWxEZXNjdSIgOiAwLA0KICAgICJ0cmlidXRvcyIgOiBudWxsLA0KICAgICJzdWJUb3RhbCIgOiAxLjEzLA0KICAgICJpdmFSZXRlIiA6IDAsDQogICAgIm1vbnRvVG90YWxPcGVyYWNpb24iIDogMS4xMywNCiAgICAidG90YWxOb0dyYXZhZG8iIDogMCwNCiAgICAidG90YWxQYWdhciIgOiAxLjEzLA0KICAgICJ0b3RhbExldHJhcyIgOiAiVU5PIDEzLzEwMCIsDQogICAgInRvdGFsSXZhIiA6IDAuMTMsDQogICAgInNhbGRvRmF2b3IiIDogMCwNCiAgICAiY29uZGljaW9uT3BlcmFjaW9uIiA6IDEsDQogICAgInBhZ29zIiA6IFsgew0KICAgICAgImNvZGlnbyIgOiAiMDEiLA0KICAgICAgIm1vbnRvUGFnbyIgOiAxLjEzLA0KICAgICAgInJlZmVyZW5jaWEiIDogbnVsbCwNCiAgICAgICJwbGF6byIgOiBudWxsLA0KICAgICAgInBlcmlvZG8iIDogbnVsbA0KICAgIH0gXSwNCiAgICAibnVtUGFnb0VsZWN0cm9uaWNvIiA6IG51bGwNCiAgfSwNCiAgImFwZW5kaWNlIiA6IG51bGwNCn0.BzH3-ivUUYhc_6BFi3J9za5fqcTy2NO6d6Kdz6moQxbWN_ABGSSmW6iryFFDFjdY_GMSGwLW08CsmE8UKS4ZsGGM2_Jn2l7LZU2RMbilgj8RjmNxt2iI0oj05KlotJ1ksNctuCMG-WnPvsP7_bm3tMKGH_FmMpsBN0xAHL8FZTh_nJ5IMSOyBbN77N4xlQX2xMPZgM1loYulV3mohgWT6jCCrGqSTKn7domRTZvD2zZX_EQyfgsJaLbsZDbmEdaJ_zpEycTnS2P1xTtsOfsWpVbY8Sq9BLx9NI44v1QKEYgEo9_QYiml2b0WEMNDPH70EphcQV-ZbQa9gGpu4hxB7w",
+    "selloRecibido": "20262AD8F5B9E67244719F541ECFEDE3C52DUFBI"
+}
